@@ -1,8 +1,9 @@
 ////////////// Business Logic
 
-var crypto = function(phrase) {
-  var 
-}
+var cry = function(phrase) {
+  lowerPhrase = phrase.toLowerCase().split(' ').join('');
+  return lowerPhrase;
+};
 
 
 
@@ -10,11 +11,10 @@ var crypto = function(phrase) {
 ////////////// User Logic
 
 $(document).ready(function() {
-  $("form#formOne").submit(function(event) {
-    event.preventDefault();
-
-    var input = $("input#input").val();
-    var result = crypto(input);
-    return result;
+   $("form#formOne").submit(function(event) {
+     event.preventDefault();
+     var input = ($("input#input").val());
+     var result = cry(input);
+     $("#result").text(result);
   });
 });

@@ -15,19 +15,23 @@ A website created with HTML and Javascript where a user can submit a phrase and 
 Input: I eat food
 Output: ieatfood
 
-2. Count the character of the input phrases.
+2. Disregard all special characters in input phrase.
+Input: Hello there!
+Output: hellothere
+
+3. Count the character of the input phrases.
 Input: Cat
 Output: 3
 
-3. Define the number rows and columns are needed based on the character counts.
+4. Define the number rows and columns are needed based on the character counts.
 Input: Cryptosquare
 Output: 4 rows and 3 columns
 
-4. Rearrange the phrase into the secret
+5. Rearrange the phrase into the secret
 Input: Tiger
 Output: tgrie
 
-5. Encoding the text in groups of five letters
+6. Encoding the text in groups of five letters
 Input: Yesterday, I walk my dog
 Output: yeyid eriko sdwmg taay
 
