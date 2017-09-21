@@ -6,8 +6,24 @@ var cry = function(phrase) {
     return regx;
 };
 
-
-
+var root = function(number) {
+  debugger;
+  var sqrtNumber = Math.sqrt(number);
+  var firstDigit = sqrtNumber.toString()[0];
+  firstDigit = parseInt(firstDigit);
+  if (sqrtNumber == firstDigit){
+    var row = firstDigit;
+    var col = firstDigit;
+  }else if(sqrtNumber < (firstDigit + 0.5)) {
+    var row = (firstDigit + 1);
+    var col = (firstDigit);
+  } else if (sqrtNumber > (firstDigit + 0.5)) {
+    var row = (firstDigit + 1);
+    var col = (firstDigit + 1);
+  }
+  var boxes = [row,col];
+  return boxes;
+};
 
 ////////////// User Logic
 
@@ -19,6 +35,7 @@ $(document).ready(function() {
 
      var number = result.length;
 
+     number = root(number);
 
      $("#result").text(number);
   });
