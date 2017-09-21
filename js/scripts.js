@@ -7,7 +7,6 @@ var cry = function(phrase) {
 };
 
 var root = function(number) {
-  debugger;
   var sqrtNumber = Math.sqrt(number);
   var firstDigit = sqrtNumber.toString()[0];
   firstDigit = parseInt(firstDigit);
@@ -25,6 +24,16 @@ var root = function(number) {
   return boxes;
 };
 
+var loop = function(number, text){
+  debugger;
+  var arrayResults = []
+  for(i = 0; i < number[1]; i++){
+    for(j = 0; j < (number[0]*number[1]); j = j + number[1]){
+      arrayResults.push(text[j+i])
+    }
+  } return arrayResults;
+}
+
 ////////////// User Logic
 
 $(document).ready(function() {
@@ -36,7 +45,11 @@ $(document).ready(function() {
      var number = result.length;
 
      number = root(number);
+     var splitChar = result.split("");
 
-     $("#result").text(number);
+     var arrayResult = loop(number, splitChar);
+
+     var joinResult = arrayResult.join("");
+     $("#result").text(joinResult);
   });
 });
