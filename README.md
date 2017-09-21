@@ -40,7 +40,7 @@ Output: yeyid eriko sdwmg taay
 N/A
 
 ## Known Bugs
-* No known bugs at this time.
+* Last specs is not working
 
 ## Technologies Used
 * JS

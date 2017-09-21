@@ -25,7 +25,6 @@ var root = function(number) {
 };
 
 var loop = function(number, text){
-  debugger;
   var arrayResults = []
   for(i = 0; i < number[1]; i++){
     for(j = 0; j < (number[0]*number[1]); j = j + number[1]){
@@ -33,6 +32,13 @@ var loop = function(number, text){
     }
   } return arrayResults;
 }
+
+// var spaces = function(joinResult, number) {
+//   debugger;
+//   for(i = 4; i < number; i+=5) {
+//     joinResult = joinResult.charAt(i) + ' ';
+//   } return joinResult;
+// }
 
 ////////////// User Logic
 
@@ -44,12 +50,14 @@ $(document).ready(function() {
 
      var number = result.length;
 
-     number = root(number);
+     var rootNumber = root(number);
      var splitChar = result.split("");
 
-     var arrayResult = loop(number, splitChar);
+     var arrayResult = loop(rootNumber, splitChar);
 
      var joinResult = arrayResult.join("");
-     $("#result").text(joinResult);
+
+     var finalResult = spaces(joinResult, number);
+     $("#result").text(finalResult);
   });
 });
