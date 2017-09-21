@@ -16,6 +16,10 @@ $(document).ready(function() {
      event.preventDefault();
      var input = ($("input#input").val());
      var result = cry(input);
-     $("#result").text(result);
+
+     var number = result.length;
+
+
+     $("#result").text(number);
   });
 });
