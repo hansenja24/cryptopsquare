@@ -2,7 +2,8 @@
 
 var cry = function(phrase) {
   lowerPhrase = phrase.toLowerCase().split(' ').join('');
-  return lowerPhrase;
+  var regx = lowerPhrase.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '');
+    return regx;
 };
 
 
